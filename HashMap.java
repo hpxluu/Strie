@@ -1,6 +1,6 @@
 public class HashMap<K,V> {
 	
-	private ThreeTenHashSet<Pair<K,V>> hashTable;
+	private HashSet<Pair<K,V>> hashTable;
 	private static class Pair<K,V> {
 
 		K key;
@@ -101,9 +101,9 @@ public class HashMap<K,V> {
 			return null;
 	}
 
-	public SimpleList<K> getKeys(){
-		SimpleList<Pair<K,V>> allValues = hashTable.allValues();
-		SimpleList<K> keys = new SimpleList<>();
+	public LinkedLst<K> getKeys(){
+		LinkedLst<Pair<K,V>> allValues = hashTable.allValues();
+		LinkedLst<K> keys = new LinkedLst<>();
 		
 		for (Pair<K,V> pair: allValues){
 			keys.addLast(pair.getKey());
