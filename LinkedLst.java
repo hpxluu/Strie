@@ -1,7 +1,7 @@
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class SimpleList<T> implements Iterable<T> {
+public class LinkedLst<T> implements Iterable<T> {
 	
 	private class Node<T> {
 		T value;
@@ -17,7 +17,7 @@ public class SimpleList<T> implements Iterable<T> {
 	private int numNodes;
 		
 
-	public SimpleList(){ 
+	public LinkedLst(){ 
 		head = tail = null; 
 		numNodes = 0;
 	}
