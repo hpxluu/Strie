@@ -101,7 +101,7 @@ public class Strie{
 		StrieNode tempNode = root;
 		
 		if (numWords()!=0) {
-			SimpleList<StrieNode> q = new SimpleList<StrieNode>();
+			LinkedLst<StrieNode> q = new LinkedLst<StrieNode>();
 			
 			for (Character ch:tempNode.getAllChildren().getKeys()) {
 				q.addLast(tempNode.getChild(ch));
@@ -128,7 +128,7 @@ public class Strie{
 		return levelOrder;
 	}
 
-	private void getStrieWords(SimpleList<String> wordlst, StrieNode tempNode, String strie) {
+	private void getStrieWords(LinkedLst<String> wordlst, StrieNode tempNode, String strie) {
 		
 		if (tempNode.getNumChildren()==0) {
 			wordlst.addLast(strie); return;
@@ -146,12 +146,14 @@ public class Strie{
 		}
 	}
 	 
-	public SimpleList<String> getStrieWords() {
+	public LinkedLst<String> getStrieWords() {
 		
-		StrieNode tempNode = root; String strie = ""; SimpleList<String> wordlst = null;
+		StrieNode tempNode = root; 
+		String strie = ""; 
+		LinkedLst<String> wordlst = null;
 		
 		if (numWords()!=0) {
-			getStrieWords(wordlst = new SimpleList<String>(), tempNode, strie);
+			getStrieWords(wordlst = new LinkedLst<String>(), tempNode, strie);
 		}
 		return wordlst;
 	}	
