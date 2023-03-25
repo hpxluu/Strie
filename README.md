@@ -27,14 +27,15 @@ StrieDemo java
 
 # Behaviors 
 
-Inserting word 
+- Inserting word 
   - Accepts string arguements
 
-Search word
+- Search word
   - Accepts string arguements
 
-Remove word
+- Remove word
   - Accepts string arguements
 
-Level-order traversal
-Display existing words
+- Level-order traversal
+
+- Display existing words
