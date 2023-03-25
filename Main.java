@@ -43,7 +43,7 @@ public class Main {
 						
 						break;
 					case 5:
-						SimpleList<String> allStrings = myStrie.getStrieWords();
+						LinkedLst<String> allStrings = myStrie.getStrieWords();
 						
 						if (allStrings==null)
 							System.out.println("Empty strie with zero words.");
