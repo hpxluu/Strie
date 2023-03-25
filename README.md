@@ -22,7 +22,7 @@ In the specific directory where the program folder is located then run these com
 
 Mac/Linux/Windows: 
 ```
-StrieDemo java
+Main java
 ```
 
 # Behaviors 
