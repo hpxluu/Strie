@@ -122,7 +122,7 @@ public class HashSet<T> {
 		return s.toString().trim();
 	}
 
-	public SimpleList<T> allValues(){
+	public LinkedLst<T> allValues(){
 		// return all items in set as a list
 		LinkedLst<T> all = new LinkedLst<>();
 		for(int i = 0; i < table.length; i++) {
