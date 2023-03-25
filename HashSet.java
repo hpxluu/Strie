@@ -1,14 +1,14 @@
-public class ThreeTenHashSet<T> {
+public class HashSet<T> {
 
-	private SimpleList<T>[] table;
+	private LinkedLst<T>[] table;
 	private int numItems;
 
 	@SuppressWarnings("unchecked")
-	public ThreeTenHashSet(int initLength){
+	public HashSet(int initLength){
 		if (!(initLength >= 2)) {
 			initLength = 2;
 		}
-		this.table = new SimpleList[initLength];
+		this.table = new LinkedLst[initLength];
 		this.numItems = 0;
 	}
 
@@ -32,7 +32,7 @@ public class ThreeTenHashSet<T> {
 			int index = Math.abs(value.hashCode() % capacity());
 			
 			if (table[index] == null) { // initialize the address pointer of the array
-				SimpleList<T> n = new SimpleList<>();
+				LinkedLst<T> n = new LinkedLst<>();
 				n.addLast(value); table[index] = n; numItems++; isAdded = true;
 			}
 			
@@ -85,8 +85,8 @@ public class ThreeTenHashSet<T> {
 		
 		boolean isRehashed = false;
 		if (newCapacity > capacity()) {
-			SimpleList<T> e = allValues();
-			SimpleList<T>[] tableTemp = new SimpleList[newCapacity];
+			LinkedLst<T> e = allValues();
+			LinkedLst<T>[] tableTemp = new LinkedLst[newCapacity];
 			this.table = tableTemp; this.numItems = 0;
 			while (e.size()!=0) {
 				T tempVal = e.removeFirst();
@@ -124,7 +124,7 @@ public class ThreeTenHashSet<T> {
 
 	public SimpleList<T> allValues(){
 		// return all items in set as a list
-		SimpleList<T> all = new SimpleList<>();
+		LinkedLst<T> all = new LinkedLst<>();
 		for(int i = 0; i < table.length; i++) {
 			if (table[i]!=null){
 				for (T value: table[i])
