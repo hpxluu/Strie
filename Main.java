@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.InputMismatchException;
 
-public class StrieDemo {
+public class Main {
 
 	public static void main(String[] args) {
 		Strie myStrie = new Strie();
