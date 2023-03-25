@@ -29,11 +29,12 @@ StrieDemo java
 
 Inserting word 
   - Accepts string arguements
+
 Search word
   - Accepts string arguements
+
 Remove word
   - Accepts string arguements
 
 Level-order traversal
-
 Display existing words
